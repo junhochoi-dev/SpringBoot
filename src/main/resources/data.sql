@@ -7,7 +7,7 @@ INSERT INTO article(title, content) VALUES('당신의 소울 푸드는 ?', '댓�
 INSERT INTO article(title, content) VALUES('당신의 취미는 ?', '댓글 고고고');
 
 INSERT INTO comment(article_id, nickname, body) VALUES(4, 'Park', '굿 윌 헐팅');
-INSERT INTO comment(article_id, nickname, body) VALUES(4, 'Kim', '아이엠 샘');
+INSERT INTO comment(article_id, nickname, body) VALUES(4, 'Kim', '아이 엠 샘');
 INSERT INTO comment(article_id, nickname, body) VALUES(4, 'Choi', '쇼생크 탈출');
 
 INSERT INTO comment(article_id, nickname, body) VALUES(5, 'Park', '치킨');
