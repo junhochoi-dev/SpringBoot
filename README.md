@@ -1,8 +1,5 @@
 # SpringPractice
 
-![image](https://github.com/junhochoi-dev/SpringPractice/assets/39554558/6fef94d7-6472-4964-83f9-aa36c3909092)
-
-
 
 
 ![image](https://github.com/junhochoi-dev/SpringPractice/assets/39554558/829b2a01-c531-47ed-bb5f-e12ebe4eca56)
@@ -23,6 +20,8 @@
 Database의 내용을 바꿀 때,
 
 ## Reference
+
+![image](https://github.com/junhochoi-dev/SpringPractice/assets/39554558/6fef94d7-6472-4964-83f9-aa36c3909092)
 
 https://wikidocs.net/162255
 
