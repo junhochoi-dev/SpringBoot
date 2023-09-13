@@ -1,5 +1,6 @@
 package com.example.firstproject.entity;
 
+import com.example.firstproject.dto.CommentDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,4 +26,11 @@ public class Comment {
 
     @Column
     private String body; // 댓글 본문
+
+    public static Comment createComment(CommentDto dto, Article article) {
+        // 예외 발생
+
+        // 엔티티 생성 및 반환
+
+    }
 }
