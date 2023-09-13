@@ -4,7 +4,7 @@
 
 
 
-![image](https://github.com/junhochoi-dev/SpringPractice/assets/39554558/fadccf75-7ab4-4d5a-b4f4-45a7e5c09df5)
+![image](https://github.com/junhochoi-dev/SpringPractice/assets/39554558/fadccf75-7ab4-4d5a-b4f4-45a7e5c09df5){: width="300" height="700"}
 
 
 
