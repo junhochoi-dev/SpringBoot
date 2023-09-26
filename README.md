@@ -15,8 +15,7 @@
 
 > Service
 
-> Repository
-
+> Repository(DAO (Data Access Object))
 
 > Transactional
 
