@@ -5,6 +5,7 @@ import com.example.firstproject.entity.Article;
 import com.example.firstproject.entity.Comment;
 import com.example.firstproject.repository.ArticleRepository;
 import com.example.firstproject.repository.CommentRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,8 +20,6 @@ public class CommentService {
 
     @Autowired
     private ArticleRepository articleRepository;
-
-
 
     // 1. 댓글 조회
     public List<CommentDto> comments(Long articleId) {
@@ -41,9 +40,8 @@ public class CommentService {
                 .collect(Collectors.toList()); // 스트림을 리스트로 변환
     }
 
-
-
     // 2. 댓글 생성
+    @Transactional
     public CommentDto create(Long articleId, CommentDto dto) {
         // 1. 게시글 조회 및 예외 발생
         Article article = articleRepository.findById(articleId) // 부모 게시글 가져오기
@@ -57,11 +55,21 @@ public class CommentService {
         return CommentDto.createCommentDto(created);
     }
 
-
-    
-    
     // 3. 댓글 수정
-    
+    @Transactional
+    public CommentDto update(Long id, CommentDto dto){
+        // 1. 댓글 조회 및 예외 발생
+        Comment target = commentRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("댓글 수정 실패!" +
+                        "대상 댓글이 없습니다."));
+        // 2. 댓글 수정
+        target.patch(dto);
+        // 3. DB로 갱신
+        Comment updated = commentRepository.save(target);
+        // 4. 댓글 엔티티를 DTO로 변환 및 반환
+        return CommentDto.createCommentDto(updated);
+    }
+
     // 4. 댓글 삭제
 
 }
