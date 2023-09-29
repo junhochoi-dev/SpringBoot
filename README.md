@@ -4,7 +4,7 @@
 
 ![image](https://github.com/junhochoi-dev/SpringPractice/assets/39554558/829b2a01-c531-47ed-bb5f-e12ebe4eca56)
 
-## PART01
+## PART01 스프링 부트 시작하기
 
 ## PART02
 
