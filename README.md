@@ -4,11 +4,13 @@
 
 ![image](https://github.com/junhochoi-dev/SpringPractice/assets/39554558/829b2a01-c531-47ed-bb5f-e12ebe4eca56)
 
-## PART01 스프링 부트 시작하기
+## PART01 스프링 부트 개요
 
 > 01장 :: 스프링 부트 시작하기
 
 > 02장 :: MVC 패턴 이해와 실습
+
+## PART02 게시판 CRUD 만들기
 
 > 03장 :: 게시판 만들고 새 글 작성하기 (Create)
 
@@ -20,9 +22,19 @@
 
 > 07장 :: 게시글 수정하기 (Update)
 
-## PART02
+> 08장 :: 게시글 삭제하기 (Delete)
 
-## PART03 REST API와 JSON
+> 09장 :: CRUD와 SQL 쿼리 종합
+
+## PART03 REST API와 테스트 코드 작성하기
+
+> 10장 :: REST API와 JSON
+
+> 11장 :: HTTP와 REST 컨트롤러
+
+> 12장 :: 서비스 계층과 트랜잭션
+
+> 13장 :: 테스트 코드 작성하기
 
 ## PART04 댓글 CRUD 만들기
 
