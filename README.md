@@ -68,6 +68,11 @@
 
 > 16장 :: 웹 페이지에서 댓글 목록 보기
 
+1. 댓글의 레이아웃
+
+2. 댓글 뷰 파일의 생성
+
+3. {{#commentsDtos}} {{/commentsDtos}}
 
 
 ## Reference
