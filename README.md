@@ -4,69 +4,69 @@
 
 ![image](https://github.com/junhochoi-dev/SpringPractice/assets/39554558/829b2a01-c531-47ed-bb5f-e12ebe4eca56)
 
-## PART01 스프링 부트 개요
+# PART01 스프링 부트 개요
 
-> 01장 :: 스프링 부트 시작하기
+## 01장 :: 스프링 부트 시작하기
 
-> 02장 :: MVC 패턴 이해와 실습
+## 02장 :: MVC 패턴 이해와 실습
 
-## PART02 게시판 CRUD 만들기
+# PART02 게시판 CRUD 만들기
 
-> 03장 :: 게시판 만들고 새 글 작성하기 (Create)
+## 03장 :: 게시판 만들고 새 글 작성하기 (Create)
 
-> 04장 :: 롬복과 리팩터링
+## 04장 :: 롬복과 리팩터링
 
-> 05장 :: 게시글 읽기 (Read)
+## 05장 :: 게시글 읽기 (Read)
 
-> 06장 :: 게시판 내 페이지 이동하기
+## 06장 :: 게시판 내 페이지 이동하기
 
-> 07장 :: 게시글 수정하기 (Update)
+## 07장 :: 게시글 수정하기 (Update)
 
-> 08장 :: 게시글 삭제하기 (Delete)
+## 08장 :: 게시글 삭제하기 (Delete)
 
-> 09장 :: CRUD와 SQL 쿼리 종합
+## 09장 :: CRUD와 SQL 쿼리 종합
 
-## PART03 REST API와 테스트 코드 작성하기
+# PART03 REST API와 테스트 코드 작성하기
 
-> 10장 :: REST API와 JSON
+## 10장 :: REST API와 JSON
 
-> 11장 :: HTTP와 REST 컨트롤러
+## 11장 :: HTTP와 REST 컨트롤러
 
-> 12장 :: 서비스 계층과 트랜잭션
+## 12장 :: 서비스 계층과 트랜잭션
 
-> 13장 :: 테스트 코드 작성하기
+## 13장 :: 테스트 코드 작성하기
 
-## PART04 댓글 CRUD 만들기
+# PART04 댓글 CRUD 만들기
 
-> 14장 :: 댓글 엔티티와 리파지터리 만들기
+## 14장 :: 댓글 엔티티와 리파지터리 만들기
 
-1. 일대다 관계, 다대일 관계
+> 1. 일대다 관계, 다대일 관계
 
-2. 대표키와 외래키
+> 2. 대표키와 외래키
 
-3. 다대일 관계 설정
+> 3. 다대일 관계 설정
 
-4. @ManyToOne
+> 4. @ManyToOne
 
-5. @JoinColumn
+> 5. @JoinColumn
 
-6. JpaRepository
+> 6. JpaRepository
 
-7. 네이티브 쿼리 메서드
+> 7. 네이티브 쿼리 메서드
 
-8. @Query
+> 8. @Query
 
-9. 네이티브 쿼리 XML
+> 9. 네이티브 쿼리 XML
 
-10. orm.xml 코드 작성 방법
+> 10. orm.xml 코드 작성 방법
 
-11. @DataJpaTest
+> 11. @DataJpaTest
 
-12. @DisplayName
+> 12. @DisplayName
 
-> 15장 :: 댓글 컨트롤러와 서비스 만들기
+## 15장 :: 댓글 컨트롤러와 서비스 만들기
 
-1. 댓글 CRUD를 위한 REST API
+> 1. 댓글 CRUD를 위한 REST API
 
 댓글 데이터를 CRUD 하기 위해서는 REST 컨트롤러, 서비스, DTO, 엔티티, 리파지터리가 필요합니다.
 
@@ -90,40 +90,40 @@
 
   엔티티를 관리하는 인터페이스로 데이터 CRUD 등의 기능을 제공, 서비스의 명령을 받아 댓글 CRUD 등의 명령을 DB에 보내고 응답받음
 
-2. 댓글 엔티티의 메서드
+> 2. 댓글 엔티티의 메서드
 
-3. 스트림(stream)
+> 3. 스트림(stream)
 
-4. @JsonProperty
+> 4. @JsonProperty
 
-5. orElseThrow()
+> 5. orElseThrow()
 
 > 16장 :: 웹 페이지에서 댓글 목록 보기
 
-1. 댓글의 레이아웃
+> 1. 댓글의 레이아웃
 
-2. 댓글 뷰 파일의 생성
+> 2. 댓글 뷰 파일의 생성
 
-3. {{#commentsDtos}} {{/commentsDtos}}
+> 3. {{#commentsDtos}} {{/commentsDtos}}
 
 > 17장 :: 웹 페이지 에서 댓글 등록하기
 
-1. 댓글 등록하기
+> 1. 댓글 등록하기
 
-2. 버튼 변수화
+> 2. 버튼 변수화
 
 ```javascript
   자료형 변수명 = document.querySelector("#id값");
 ```
 
-3. 버튼 이벤트 감지
+> 3. 버튼 이벤트 감지
 
 ```javascript
   // 이벤트가 감지되면 이벤트 처리 함수를 실행
   요소명.addEventListner("이벤트 타입", 이벤트 처리 함수)
 ```
 
-4. 댓글 객체 생성
+> 4. 댓글 객체 생성
 
 ```javascript
   var object = {
@@ -133,7 +133,7 @@
   }  
 ```
 
-5. REST API 호출과 응답 처리
+> 5. REST API 호출과 응답 처리
 
 ```javascript
   fetch("API 주소", {
@@ -147,27 +147,27 @@
   });
 ```
 
-> 18장 :: 웹 페이지에서 댓글 수정하기
+## 18장 :: 웹 페이지에서 댓글 수정하기
 
-1. 모달
+> 1. 모달
 
-2. 댓글 수정하기
+> 2. 댓글 수정하기
 
-3. 트리거 데이터 전달
+> 3. 트리거 데이터 전달
 
-4. 모달 이벤트 감지
+> 4. 모달 이벤트 감지
 
-> 19장 :: 웹 페이지에서 댓글 삭제하기
+## 19장 :: 웹 페이지에서 댓글 삭제하기
 
-1. 댓글 삭제하기
+> 1. 댓글 삭제하기
 
-2. querySelectorAll()
+> 2. querySelectorAll()
 
 ```javascript
   .querySelectorAll("CSS 선택자 문법")
 ```
 
-3. forEach()
+> 3. forEach()
 
 ```javascript
   .forEach(function() {
@@ -175,7 +175,7 @@
   });
 ```
 
-4. 백틱(`) 문자열
+> 4. 백틱(`) 문자열
 
 ```javascript
   const x = "한우";
