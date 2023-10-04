@@ -1,5 +1,8 @@
 # SpringPractice
 
+스프링부트 시작 및 디펜던시
+
+https://start.spring.io/
 
 
 ![image](https://github.com/junhochoi-dev/SpringPractice/assets/39554558/829b2a01-c531-47ed-bb5f-e12ebe4eca56)
