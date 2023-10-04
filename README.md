@@ -40,6 +40,30 @@
 
 > 14장 :: 댓글 엔티티와 리파지터리 만들기
 
+1. 일대다 관계, 다대일 관계
+
+2. 대표키와 외래키
+
+3. 다대일 관계 설정
+
+4. @ManyToOne
+
+5. @JoinColumn
+
+6. JpaRepository
+
+7. 네이티브 쿼리 메서드
+
+8. @Query
+
+9. 네이티브 쿼리 XML
+
+10. orm.xml 코드 작성 방법
+
+11. @DataJpaTest
+
+12. @DisplayName
+
 > 15장 :: 댓글 컨트롤러와 서비스 만들기
 
 1. 댓글 CRUD를 위한 REST API
@@ -65,6 +89,14 @@
 * 리파지터리
 
   엔티티를 관리하는 인터페이스로 데이터 CRUD 등의 기능을 제공, 서비스의 명령을 받아 댓글 CRUD 등의 명령을 DB에 보내고 응답받음
+
+2. 댓글 엔티티의 메서드
+
+3. 스트림(stream)
+
+4. @JsonProperty
+
+5. orElseThrow()
 
 > 16장 :: 웹 페이지에서 댓글 목록 보기
 
@@ -124,6 +156,31 @@
 3. 트리거 데이터 전달
 
 4. 모달 이벤트 감지
+
+> 19장 :: 웹 페이지에서 댓글 삭제하기
+
+1. 댓글 삭제하기
+
+2. querySelectorAll()
+
+```javascript
+  .querySelectorAll("CSS 선택자 문법")
+```
+
+3. forEach()
+
+```javascript
+  .forEach(function() {
+    // 실행문
+  });
+```
+
+4. 백틱(`) 문자열
+
+```javascript
+  const x = "한우";
+  const burger = `${x} 버거`; // 한우 버거
+```
 
 ## Reference
 
