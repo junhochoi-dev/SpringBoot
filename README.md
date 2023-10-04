@@ -74,6 +74,46 @@
 
 3. {{#commentsDtos}} {{/commentsDtos}}
 
+> 17장 :: 웹 페이지 에서 댓글 등록하기
+
+1. 댓글 등록하기
+
+2. 버튼 변수화
+
+```javascript
+  자료형 변수명 = document.querySelector("#id값");
+```
+
+3. 버튼 이벤트 감지
+
+```javascript
+  // 이벤트가 감지되면 이벤트 처리 함수를 실행
+  요소명.addEventListner("이벤트 타입", 이벤트 처리 함수)
+```
+
+4. 댓글 객체 생성
+
+```javascript
+  var object = {
+    key1: value1,
+    key2: value2,
+    ...
+  }  
+```
+
+5. REST API 호출과 응답 처리
+
+```javascript
+  fetch("API 주소", {
+    method: "POST",
+    headers: {
+      "ContentType": "application/json"
+    },
+    body: JSON.stringify(객체)
+  }).then(response => {
+    응답 처리문
+  });
+```
 
 ## Reference
 
