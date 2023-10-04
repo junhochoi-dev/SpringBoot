@@ -1,6 +1,8 @@
 package com.example.firstproject.controller;
 
 // 컨트롤러 선언과 동시에 자동으로 임포트
+import com.example.firstproject.dto.CommentDto;
+import com.example.firstproject.service.CommentService;
 import org.springframework.stereotype.Controller;
 // URL 연결 요청(@GetMapping())과 동시에 자동으로 임포트
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,6 +32,8 @@ public class ArticleController {
     // 스프링 부트가 미리 생성해놓은 리파지터리 객체 주입(DI)
     @Autowired
     private ArticleRepository articleRepository;
+    @Autowired
+    private CommentService commentService;
 
     @GetMapping("/articles/new")
     public String newArticleForm(){
@@ -58,8 +62,14 @@ public class ArticleController {
         // 1. id를 조회해서 데이터 가져오기
         //Optional<Article> articleEntity = articleRepository.findById(id);
         Article articleEntity = articleRepository.findById(id).orElse(null);
+        List<CommentDto> commentDtos = commentService.comments(id);
+
+        System.out.println(commentDtos.size());
+
         // 2. 모델에 데이터 등록하기
         model.addAttribute("article", articleEntity);
+        model.addAttribute("commentDtos", commentDtos);
+
         // 3. 뷰 페이지 변환하기
         return "articles/show";
     }
