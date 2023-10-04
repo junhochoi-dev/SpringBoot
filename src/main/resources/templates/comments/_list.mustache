@@ -3,16 +3,20 @@
         <div class="card m-2" id="comments-{{id}}">
             <div class="card-header">
                 {{nickname}}
-            <!-- Button trigger modal -->
-            <button type="button"
-                    class="btn btn-sm btn-outline-primary"
-                    data-bs-toggle="modal"
-                    data-bs-target="#comment-edit-modal"
-                    data-bs-id="{{id}}"
-                    data-bs-nickname="{{nickname}}"
-                    data-bs-body="{{body}}"
-                    data-bs-article-id="{{articleId}}">
-                수정</button>
+                <!-- Button trigger modal -->
+                <button type="button"
+                        class="btn btn-sm btn-outline-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#comment-edit-modal"
+                        data-bs-id="{{id}}"
+                        data-bs-nickname="{{nickname}}"
+                        data-bs-body="{{body}}"
+                        data-bs-article-id="{{articleId}}">
+                    수정</button>
+
+                <!-- 댓글 삭제 버튼 -->
+                <button type="button" class="btn btn-sm btn-outline-danger comment-delete-btn"
+                data-comment-id="{{id}}">삭제</button>
             </div>
             <div class="card-body">
                 {{body}}
@@ -101,6 +105,46 @@
                 alert(msg);
                 // 현재 페이지 새로고침
                 window.location.reload();
+            });
+        });
+    }
+    <!-- 댓글 삭제 -->
+<!--    {-->
+<!--        // 삭제 버튼 선택-->
+<!--        const commentDeleteBtn = document.querySelector(".comment-delete-btn");-->
+<!--        // 삭제 버튼 이벤트 처리-->
+<!--        commentDeleteBtn.addEventListener("click", function() {-->
+<!--            console.log("댓글이 삭제되었습니다");-->
+<!--        });-->
+<!--    }-->
+    {
+        const commentDeleteBtns = document.querySelectorAll(".comment-delete-btn");
+        commentDeleteBtns.forEach(btn => {
+            console.log("TEST");
+            btn.addEventListener("click", (event) => {
+                // 이벤트 발생 요소 선택
+                const commentDeleteBtn = event.target;
+                // 삭제 댓글 id 가져오기
+                const commentId = commentDeleteBtn.getAttribute("data-comment-id");
+                console.log(`삭제 버튼 클릭: ${commentId}번 댓글`);
+                // 삭제 REST API 호출
+                const url = `/api/comments/${commentId}`;
+                fetch(url, {
+                    method: "DELETE"
+                }).then(response => {
+                    // 댓글 삭제 실패 처리
+                    if(!response.ok) {
+                        alert("댓글 삭제를 실패하였습니다");
+                        return;
+                    }
+                    // 삭제 성공 시 댓글을 화면에서 지우고 메세지 창 띄우기
+                    const target = document.querySelector(`#comments-${commentId}`);
+                    target.remove();
+                    const msg = `${commentId}번 댓글을 삭제하였습니다.`;
+                    alert(msg);
+                    // 현재 페이지 새로 고침
+                    window.location.reload();
+                });
             });
         });
     }
