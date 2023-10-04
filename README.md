@@ -115,6 +115,16 @@
   });
 ```
 
+> 18장 :: 웹 페이지에서 댓글 수정하기
+
+1. 모달
+
+2. 댓글 수정하기
+
+3. 트리거 데이터 전달
+
+4. 모달 이벤트 감지
+
 ## Reference
 
 ![image](https://github.com/junhochoi-dev/SpringPractice/assets/39554558/6fef94d7-6472-4964-83f9-aa36c3909092)
