@@ -1,0 +1,60 @@
+<div class="card m-2" id="comments-new">
+    <div class="card-body">
+        <!-- 댓글 작성 폼 -->
+        <form>
+            <!-- 닉네임 입력 -->
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">닉네임</label>
+                <input type="text" class="form-control" id="new-comment-nickname">
+            </div>
+            <!-- 댓글 본문 입력 -->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">댓글 내용</label>
+                <textarea type="text" class="form-control" rows="3" id="new-comment-body">
+                </textarea>
+            </div>
+            <!-- 히든 인풋 -->
+            {{#article}}
+                <input type="hidden" id="new-comment-article-id" value="{{id}}">
+            {{/article}}
+            <!-- 전송 버튼-->
+            <button type="button" class="btn btn-primary" id="comment-create-btn">댓글 작성</button>
+        </form>
+    </div>
+</div>
+<script>
+    {
+        // 댓글 생성 버튼 변수화
+        const commentCreateBtn = document.querySelector("#comment-create-btn");
+        // 이벤트가 감지되면 이벤트 처리 함수 실행
+        commentCreateBtn.addEventListener("click", function() {
+            const comment = {
+                // 새 댓글의 닉네임
+                nickname: document.querySelector("#new-comment-nickname").value,
+                // 새 댓글의 본문
+                body: document.querySelector("#new-comment-body").value,
+                // 부모 게시글의 id
+                articleId: document.querySelector("#new-comment-article-id").value
+            };
+
+            // 댓글 객체 출력
+            console.log(comment);
+
+            // fetch() - 비동기 통신을 위한 API
+            const url = "/api/articles/" + comment.articleId + "/comments";
+
+            fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(comment)
+            }).then(response => {
+                // HTTP 응답 코드에 따른 메세지 출력
+                const msg = (response.ok) ? "댓글이 등록되었습니다" : "댓글 등록이 실패하였습니다";
+                alert(msg);
+                window.location.reload();
+            });
+        });
+    }
+</script>
