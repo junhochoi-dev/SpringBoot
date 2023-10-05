@@ -1,6 +1,6 @@
 # SpringBoot
 
-SpringBoot3 / JDK17 / Gradle
+SpringBoot 3.1.0 / JDK 17 / Gradle
 
 스프링부트 시작 및 디펜던시
 
