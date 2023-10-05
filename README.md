@@ -1,4 +1,4 @@
-# SpringPractice
+# SpringBoot
 
 스프링부트 시작 및 디펜던시
 
